@@ -17,7 +17,7 @@
 		8933C78E1EB5B82C000D00A4 /* IrisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* IrisTests.swift */; };
 		8933C78F1EB5B82C000D00A4 /* IrisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* IrisTests.swift */; };
 		8933C7901EB5B82D000D00A4 /* IrisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* IrisTests.swift */; };
-		C282773F2013B208009EB44A /* PocketTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28277402013B208009EB44A /* PocketTool.framework */; };
+		C20643B520161EDD00830902 /* PocketTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20643B420161EDD00830902 /* PocketTool.framework */; };
 		DD7502881C68FEDE006590AF /* Iris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6DA0F1BF000BD002C0205 /* Iris.framework */; };
 		DD7502921C690C7A006590AF /* Iris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D9F01BEFFFBE002C0205 /* Iris.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +58,7 @@
 		8933C7891EB5B82A000D00A4 /* IrisTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IrisTests.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* Iris.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Iris.plist; sourceTree = "<group>"; };
 		AD2FAA281CD0B6E100659CF4 /* IrisTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = IrisTests.plist; sourceTree = "<group>"; };
+		C20643B420161EDD00830902 /* PocketTool.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PocketTool.framework; path = Carthage/Build/iOS/PocketTool.framework; sourceTree = "<group>"; };
 		C28277402013B208009EB44A /* PocketTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PocketTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD75027A1C68FCFC006590AF /* Iris-macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Iris-macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD75028D1C690C7A006590AF /* Iris-tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Iris-tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C282773F2013B208009EB44A /* PocketTool.framework in Frameworks */,
+				C20643B520161EDD00830902 /* PocketTool.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +177,7 @@
 		C282773E2013B208009EB44A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C20643B420161EDD00830902 /* PocketTool.framework */,
 				C28277402013B208009EB44A /* PocketTool.framework */,
 			);
 			name = Frameworks;
@@ -669,6 +671,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Configs/Iris.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -693,6 +699,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Configs/Iris.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
