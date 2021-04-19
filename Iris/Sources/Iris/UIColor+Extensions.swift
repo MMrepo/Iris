@@ -22,10 +22,9 @@ extension UIColor {
     }
     
     public convenience init?(hexString: String, alpha: CGFloat = 1.0) {
-        var hex:UInt32 = 0
+        var hex: UInt64 = 0
         let scanner = Scanner(string: hexString)
-        scanner.scanLocation = 1
-        scanner.scanHexInt32(&hex)
+        scanner.scanHexInt64(&hex)
         self.init(hex: Int(hex), alpha: alpha)
     }
     
